@@ -1,0 +1,21 @@
+
+[36m___________________________________________  
+	Username: sibendu.das@gmail.com           
+	Login type: login
+___________________________________________  
+[0m
+Failed execute task
+:retrieve FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':retrieve'.
+> Failed to send request to https://login.salesforce.com/services/Soap/u/32.0
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 12.056 secs

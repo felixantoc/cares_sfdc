@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name='Apex' timestamp=''>
+    <properties />
+  </testsuite>
+  <testcase name='createBulkContact' classname='CARES_CreateContactTest' time='1954.0' />
+  <testcase name='createContact' classname='CARES_CreateContactTest' time='99.0' />
+  <testcase name='deleteContact' classname='CARES_CreateContactTest' time='234.0' />
+  <testcase name='incorrectBirthDates' classname='CARES_CreateContactTest' time='33.0' />
+  <testcase name='incorrectBirthYears' classname='CARES_CreateContactTest' time='22.0' />
+  <testcase name='invalidPhoneNumber' classname='CARES_CreateContactTest' time='31.0' />
+  <testcase name='lastNameMissing' classname='CARES_CreateContactTest' time='28.0' />
+  <testcase name='updateContact' classname='CARES_CreateContactTest' time='96.0' />
+  <testcase name='CrateTaskTest1' classname='CARES_CreateTaskControllerTest' time='110.0' />
+</testsuites>

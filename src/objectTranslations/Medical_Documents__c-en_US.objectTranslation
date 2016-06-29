@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Medical Document</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Medical Documents</value>
+    </caseValues>
+    <fields>
+        <label><!-- Diagonis --></label>
+        <name>Diagonis__c</name>
+    </fields>
+    <fields>
+        <label><!-- Doctor on Rx --></label>
+        <name>Doctor_on_Rx__c</name>
+        <relationshipLabel><!-- Medical Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dx Code --></label>
+        <name>Dx_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Extra Documentation for Doctor Sign --></label>
+        <name>Extra_Documentation_for_Doctor_Sign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length Of Need (in months) --></label>
+        <name>Length_Of_Need__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Document Type --></label>
+        <name>Medical_Document_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+        <relationshipLabel><!-- Medical Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rx Date --></label>
+        <name>Rx_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rx Description --></label>
+        <name>Rx_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rx Reason --></label>
+        <name>Rx_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rx --></label>
+        <name>Rx__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submission Template --></label>
+        <name>Submission_Template__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

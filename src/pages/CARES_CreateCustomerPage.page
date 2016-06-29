@@ -1,0 +1,204 @@
+<apex:page StandardController="Contact" sidebar="false" id="validationCust"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <apex:pagemessages />
+    <apex:form id="theForm">
+        <apex:pageBlock id="customerInput">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+             </apex:pageBlockButtons>
+                
+             <apex:pageBlockSection title="Customer Name" columns="1" id="pbs1">
+                 <apex:inputField label="Prefix" value="{!contact.Salutation}"/>
+                 <apex:inputField value="{!contact.FirstName}"  onblur="validateFirst();" id="firstName" required="true" />
+                 <apex:inputField value="{!contact.LastName}" id="lastName" onblur="validateLast();" />
+                 <apex:inputField value="{!contact.MiddleName}" id="midName" onblur="validateMid();"/>
+                 <apex:inputField value="{!contact.Suffix}" id="suffName" onblur="validateSuff();" />
+                 <apex:inputField value="{!contact.CARES_PreferredName__c}" id="preferredName" onblur="validatePre();" />
+              </apex:pageBlockSection>
+                 
+              <apex:pageBlockSection title="Customer Name" columns="3" id="pbs2">
+                 <apex:inputField value="{!contact.CARES_MonthofBirth__c}"/>
+                 <apex:inputField value="{!contact.CARES_DateofBirth__c}"/>
+                 <apex:inputField value="{!contact.CARES_YearofBirth__c}"/>
+              </apex:pageBlockSection>
+                 
+              <apex:pageBlockSection title="Customer Phone Number"  columns="2" id="pbs3">
+                 <apex:inputField label="Primary Phone Number" value="{!contact.Phone}"/>
+                 <apex:inputField value="{!contact.CARES_PrimaryPhoneType__c}">
+                    <apex:actionSupport event="onchange" reRender="customerInput"/>
+                 </apex:inputField>
+                 <apex:inputField onclick="return confirm('A text message will be sent to this number for validation');" value="{!contact.CARES_TextMessage__c}" rendered="{!IF(contact.CARES_PrimaryPhoneType__c ='Mobile',true,false)}"/>
+                 <apex:inputField label="Secondary Phone Number" value="{!contact.MobilePhone}"/>
+                 <apex:inputField value="{!contact.CARES_SecondaryPhoneType__c}">
+                    <apex:actionSupport event="onchange" reRender="customerInput"/>
+                 </apex:inputField>
+                 <apex:inputField onclick="return confirm('A text message will be sent to this number for validation');" value="{!contact.CARES_TextMessage__c}" rendered="{!IF(contact.CARES_SecondaryPhoneType__c ='Mobile',true,false)}"/>
+                 <apex:inputField label="Tertiary Phone Number" value="{!contact.OtherPhone}"/>
+                 <apex:inputField value="{!contact.CARES_TertiaryPhoneType__c}">
+                    <apex:actionSupport event="onchange" reRender="customerInput"/>
+                 </apex:inputField>
+                 <apex:inputField onclick="return confirm('A text message will be sent to this number for validation');" value="{!contact.CARES_TextMessage__c}" rendered="{!IF(contact.CARES_TertiaryPhoneType__c ='Mobile',true,false)}"/>
+              </apex:pageBlockSection>  
+                 
+              <apex:pageBlockSection title="Customer Address"  columns="2" id="pbs4">
+                 <apex:inputField value="{!contact.MailingStreet}"/>
+                 <apex:inputField value="{!contact.MailingCity}"/>
+                 <apex:inputField value="{!contact.MailingState}"/>
+                 <apex:inputField value="{!contact.MailingCountry}"/>
+                 <apex:inputField value="{!contact.MailingPostalCode}"/>
+                 <apex:inputField value="{!contact.Email}"/>
+              </apex:pageBlockSection>
+                 
+            <apex:pageBlockSection title="Doctor Communication Preference" columns="5" id="pbs5">
+                 <apex:inputField value="{!contact.Phone}"/>
+                 <apex:inputField value="{!contact.CARES_PhoneExtension__c}"/>
+                 <apex:inputField value="{!contact.CARES_PhoneBestTimeToCall__c}"/>
+                 <apex:inputField value="{!contact.CARES_PhoneTimeZone__c}"/>
+                 <apex:inputField value="{!contact.CARES_PhonePreferred__c}"/>
+                 
+                 <apex:inputField value="{!contact.Fax}"/>
+                 <apex:inputField value="{!contact.CARES_FaxExtension__c}"/>
+                 <apex:inputField value="{!contact.CARES_FaxBestTimeToCall__c}"/>
+                 <apex:inputField value="{!contact.CARES_FaxTimeZone__c}"/>
+                 <apex:inputField value="{!contact.CARES_FaxPreferred__c}"/>
+                 
+                 <apex:inputField value="{!contact.CARES_MedDocNumber__c}"/>
+                 <apex:inputField value="{!contact.CARES_MedDocExtension__c}"/>
+                 <apex:inputField value="{!contact.CARES_MedDocBestTimeToCall__c}"/>
+                 <apex:inputField value="{!contact.CARES_MedDocTimeZone__c}"/>
+                 <apex:inputField value="{!contact.CARES_MedDocPreferred__c}"/>
+                 
+                 <apex:inputField value="{!contact.CARES_MedDocFaxNumber__c}"/>
+                 <apex:inputField value="{!contact.CARES_MedDocFaxExtension__c}"/>
+                 <apex:inputField value="{!contact.CARES_MedDocFaxBestTimeToCall__c}"/>
+                 <apex:inputField value="{!contact.CARES_MedDocFaxTimeZone__c}"/>
+                 <apex:inputField value="{!contact.CARES_MedDocFaxPreferred__c}"/>
+            </apex:pageBlockSection>
+         </apex:pageBlock>
+    </apex:form>
+    
+<!-- JS for validation -->
+ <script type="text/javascript">
+     <!--Getting ID -->
+     var fId = $('[id$=firstName]');
+     var lId = $('[id$=lastName]');
+     var mId = $('[id$=midName]');
+     var sId = $('[id$=suffName]');
+     var pId = $('[id$=preferredName]');
+     
+     <!-- Special character check -->
+     var nameRegex = /^[a-zA-Z0-9-'. ]*$/;
+     
+     <!-- Setting maxlenth -->
+     $(fId).attr('maxlength','40');
+     $(lId).attr('maxlength','40');
+     $(mId).attr('maxlength','40');
+     $(sId).attr('maxlength','4');
+     $(pId).attr('maxlength','40');
+function validateFirst() {
+     var objDiv = $('<div/>', {
+                    class: 'errorMsg',
+                    text: 'First name is required'
+                });
+     var objChar = $('<div/>', {
+                    class: 'errorMsg',
+                    text: 'Remove any invalid characters, such as !@#$%^&*()'
+                });     
+    var fname = $('[id$=firstName]').val();
+    if(fname == ""){
+        $(fId).addClass('error');
+        $(fId).next('.errorMsg').remove();
+            if(!$(fId).next(".errorMsg").length){
+                $(fId).parent().append(objDiv);
+            }
+     }else if(!(fname == "") && (!(nameRegex.test(fname)))){
+         $(fId).addClass('error');   
+         $(fId).next('.errorMsg').remove();
+         if(!$(fId).next(".errorMsg").length){
+                $(fId).parent().append(objChar);
+            }
+      }else{
+         $(fId).removeClass('error');
+         $(fId).next('.errorMsg').remove();
+    } 
+    
+}
+function validateLast() {
+    var objDiv = $('<div/>', {
+                    class: 'errorMsg',
+                    text: 'Last name is required'
+                });
+     var objChar = $('<div/>', {
+                    class: 'errorMsg',
+                    text: 'Remove any invalid characters, such as !@#$%^&*()'
+                });             
+    var lname = $('[id$=lastName]').val();
+    if(lname == ""){
+        $(lId).addClass('error');
+         $(lId).next('.errorMsg').remove();
+        if(!$(lId).next(".errorMsg").length){
+                $(lId).parent().append(objDiv); 
+            }
+    }else if(!(lname == "") && (!(nameRegex.test(lname)))){
+         $(lId).addClass('error');   
+          $(lId).next('.errorMsg').remove();
+         if(!$(lId).next(".errorMsg").length){
+                $(lId).parent().append(objChar); 
+            }
+      }else{
+        $(lId).removeClass('error');
+        $(lId).next('.errorMsg').remove();
+    } 
+}
+function validateMid() {
+    var objDiv = $('<div/>', {
+                    class: 'errorMsg',
+                    text: 'Remove any invalid characters, such as !@#$%^&*()'
+                });
+    var mname = $('[id$=midName]').val();
+    if(!(mname == "") && (!(nameRegex.test(mname)))){
+        $(mId).addClass('error');
+         if(!$(mId).next(".errorMsg").length){
+                $(mId).parent().append(objDiv); 
+            }
+    }else{
+         $(mId).removeClass('error');
+         $(mId).next('.errorMsg').remove();
+    }
+}
+function validateSuff() {
+     var objDiv = $('<div/>', {
+                    class: 'errorMsg',
+                    text: 'Remove any invalid characters, such as !@#$%^&*()'
+                });
+     var sname = $('[id$=suffName]').val();
+    if(!(sname == "") && (!(nameRegex.test(sname)))){
+        $(sId).addClass('error');
+        if(!$(sId).next(".errorMsg").length){
+                $(sId).parent().append(objDiv); 
+            }
+    }else{
+         $(sId).removeClass('error');
+         $(sId).next('.errorMsg').remove();     
+    }
+}
+function validatePre() {
+    var objDiv = $('<div/>', {
+                    class: 'errorMsg',
+                    text: 'Remove any invalid characters, such as !@#$%^&*()'
+                });
+    var pname = $('[id$=preferredName]').val();
+    if(!(pname == "") && (!(nameRegex.test(pname)))){
+        $(pId).addClass('error');
+        if(!$(pId).next(".errorMsg").length){
+                $(pId).parent().append(objDiv); 
+            }
+    }else{
+         $(pId).removeClass('error');
+        $(pId).next('.errorMsg').remove();   
+    } 
+}
+</script>
+
+</apex:page>

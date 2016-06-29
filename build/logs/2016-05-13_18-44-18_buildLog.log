@@ -1,0 +1,15 @@
+Failed execute task
+ FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':retrieve'.
+> Could not find matching constructor for: org.fundacionjala.gradle.plugins.enforce.exceptions.CredentialException(java.lang.String, javax.crypto.BadPaddingException)
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 11.563 secs

@@ -1,0 +1,15 @@
+
+[36m___________________________________________  
+	Username: somnath.yadav@cardinalhealth.com.dev           
+	Login type: test
+___________________________________________  
+[0m
+Starting retrieve...
+Waiting for retrieve result...
+Retrieve result completed
+
+BUILD SUCCESSFUL
+
+Total time: 5 mins 40.36 secs
+
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html

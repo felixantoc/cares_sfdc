@@ -1,0 +1,13 @@
+
+[36m___________________________________________  
+	Username: somnath.yadav@cardinalhealth.com.dev           
+	Login type: test
+___________________________________________  
+[0m
+All unit test will be executed
+
+BUILD SUCCESSFUL
+
+Total time: 18.809 secs
+
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html

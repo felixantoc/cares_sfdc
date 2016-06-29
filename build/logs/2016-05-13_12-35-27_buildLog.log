@@ -1,0 +1,39 @@
+12:35:28.456 [QUIET] [system.out] [36m___________________________________________  
+12:35:28.472 [QUIET] [system.out] 	Username: som@congizant.com           
+12:35:28.472 [QUIET] [system.out] 	Login type: login
+12:35:28.487 [QUIET] [system.out] ___________________________________________  
+12:35:28.487 [QUIET] [system.out] [0m
+12:35:28.503 [DEBUG] [org.gradle.api.Task] after show credentials
+12:35:28.503 [DEBUG] [org.gradle.api.Task] Finished load credential
+12:35:28.519 [DEBUG] [org.gradle.api.Task] Created directory at: D:\software\gradle-2.13\My_Project\build
+12:35:28.971 [ERROR] [org.gradle.api.Task] Warning: All files will be downloaded according to the package
+12:35:28.987 [ERROR] [org.gradle.api.Task] Failed execute task
+12:35:29.002 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':retrieve'
+12:35:29.002 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :retrieve FAILED
+12:35:29.002 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :retrieve (Thread[main,5,main]) completed. Took 1.192 secs.
+12:35:29.018 [DEBUG] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] Task worker [Thread[main,5,main]] finished, busy: 1.192 secs, idle: 0.016 secs
+12:35:29.018 [ERROR] [org.gradle.BuildExceptionReporter] 
+12:35:29.033 [ERROR] [org.gradle.BuildExceptionReporter] FAILURE: Build failed with an exception.
+12:35:29.033 [ERROR] [org.gradle.BuildExceptionReporter] 
+12:35:29.033 [ERROR] [org.gradle.BuildExceptionReporter] * What went wrong:
+12:35:29.049 [ERROR] [org.gradle.BuildExceptionReporter] Execution failed for task ':retrieve'.
+12:35:29.049 [ERROR] [org.gradle.BuildExceptionReporter] > Cannot invoke method readLine() on null object
+12:35:29.065 [ERROR] [org.gradle.BuildExceptionReporter] 
+12:35:29.065 [ERROR] [org.gradle.BuildExceptionReporter] * Try:
+12:35:29.065 [ERROR] [org.gradle.BuildExceptionReporter] Run with --stacktrace option to get the stack trace. 
+12:35:29.080 [LIFECYCLE] [org.gradle.BuildResultLogger] 
+12:35:29.080 [LIFECYCLE] [org.gradle.BuildResultLogger] BUILD FAILED
+12:35:29.080 [LIFECYCLE] [org.gradle.BuildResultLogger] 
+12:35:29.096 [LIFECYCLE] [org.gradle.BuildResultLogger] Total time: 10.911 secs
+12:35:29.111 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache task history cache (D:\software\gradle-2.13\My_Project\.gradle\2.13\taskArtifacts) was closed 0 times.
+12:35:29.111 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+12:35:29.127 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+12:35:29.127 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.ResolutionResultsStoreFactory] Deleted 2 resolution results binary files in 0.016 secs
+12:35:29.143 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] In-memory dependency metadata cache closed. Repos cached: 3, cache instances: 3, modules served from cache: 0, artifacts: 0
+12:35:29.143 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Generated Gradle JARs cache (C:\Users\118223\.gradle\caches\2.13\generated-gradle-jars) was closed 0 times.
+12:35:29.158 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache artifact-at-repository.bin (C:\Users\118223\.gradle\caches\modules-2\metadata-2.16\artifact-at-repository.bin)
+12:35:29.158 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (C:\Users\118223\.gradle\caches\modules-2\metadata-2.16\module-metadata.bin)
+12:35:29.158 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-versions.bin (C:\Users\118223\.gradle\caches\modules-2\metadata-2.16\module-versions.bin)
+12:35:29.174 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (C:\Users\118223\.gradle\caches\modules-2).
+12:35:29.174 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache plugin-use-metadata.bin (C:\Users\118223\.gradle\caches\2.13\plugin-resolution\plugin-use-metadata.bin)
+12:35:29.189 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on Plugin Resolution Cache (C:\Users\118223\.gradle\caches\2.13\plugin-resolution).

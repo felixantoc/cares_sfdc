@@ -1,0 +1,8 @@
+
+[31morg.fundacionjala.gradle.plugins.enforce.exceptions.CredentialException: default  doesn't exist
+[0m[34mDo you want to try again (y/n)?
+[0m
+
+BUILD SUCCESSFUL
+
+Total time: 55.919 secs

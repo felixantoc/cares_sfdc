@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contact Information</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contact Information</value>
+    </caseValues>
+    <fields>
+        <label><!-- Best Time to Call --></label>
+        <name>Best_Time_to_Call__c</name>
+        <picklistValues>
+            <masterLabel>Anytime</masterLabel>
+            <translation><!-- Anytime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daytime</masterLabel>
+            <translation><!-- Daytime --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact Preference --></label>
+        <name>Contact_Preference__c</name>
+        <picklistValues>
+            <masterLabel>Preferred</masterLabel>
+            <translation><!-- Preferred --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Contact Information --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Extension --></label>
+        <name>Extension__c</name>
+    </fields>
+    <fields>
+        <label><!-- Telephone --></label>
+        <name>Telephone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Zone --></label>
+        <name>Time_Zone__c</name>
+        <picklistValues>
+            <masterLabel>Asian</masterLabel>
+            <translation><!-- Asian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pacific</masterLabel>
+            <translation><!-- Pacific --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Fax</masterLabel>
+            <translation><!-- Fax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Med Doc</masterLabel>
+            <translation><!-- Med Doc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Med Doc Fax</masterLabel>
+            <translation><!-- Med Doc Fax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telephone</masterLabel>
+            <translation><!-- Telephone --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Contact Information Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

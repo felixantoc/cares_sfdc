@@ -1,0 +1,130 @@
+
+[36m___________________________________________  
+	Username: sibendu.das@gmail.com           
+	Login type: login
+___________________________________________  
+[0m
+Failed execute task
+:retrieve FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':retrieve'.
+> Failed to send request to https://login.salesforce.com/services/Soap/u/32.0
+
+* Try:
+Run with --info or --debug option to get more log output.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':retrieve'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:69)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:68)
+	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:203)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:185)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:66)
+	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:50)
+	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:25)
+	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:110)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:37)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+	at org.gradle.execution.DefaultBuildExecuter.access$000(DefaultBuildExecuter.java:23)
+	at org.gradle.execution.DefaultBuildExecuter$1.proceed(DefaultBuildExecuter.java:43)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:30)
+	at org.gradle.initialization.DefaultGradleLauncher$4.run(DefaultGradleLauncher.java:154)
+	at org.gradle.internal.Factories$1.create(Factories.java:22)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:90)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:52)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:151)
+	at org.gradle.initialization.DefaultGradleLauncher.access$200(DefaultGradleLauncher.java:32)
+	at org.gradle.initialization.DefaultGradleLauncher$1.create(DefaultGradleLauncher.java:99)
+	at org.gradle.initialization.DefaultGradleLauncher$1.create(DefaultGradleLauncher.java:93)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:90)
+	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:62)
+	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:93)
+	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:82)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:94)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:28)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:43)
+	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:28)
+	at org.gradle.launcher.exec.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:81)
+	at org.gradle.launcher.exec.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:46)
+	at org.gradle.launcher.exec.DaemonUsageSuggestingBuildActionExecuter.execute(DaemonUsageSuggestingBuildActionExecuter.java:51)
+	at org.gradle.launcher.exec.DaemonUsageSuggestingBuildActionExecuter.execute(DaemonUsageSuggestingBuildActionExecuter.java:28)
+	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:43)
+	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:173)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:241)
+	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:214)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:35)
+	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:24)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:207)
+	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:169)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+	at org.gradle.launcher.Main.doAction(Main.java:33)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:55)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:36)
+	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+Caused by: org.gradle.api.GradleException: Failed to send request to https://login.salesforce.com/services/Soap/u/32.0
+	at org.fundacionjala.gradle.plugins.enforce.tasks.ForceTask.withExceptionHandling(ForceTask.groovy:125)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.ForceTask.this$4$withExceptionHandling(ForceTask.groovy)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.ForceTask.start(ForceTask.groovy:57)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:75)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.doExecute(AnnotationProcessingTaskFactory.java:228)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:221)
+	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:210)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:585)
+	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:568)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
+	... 57 more
+Caused by: java.lang.Exception: Failed to send request to https://login.salesforce.com/services/Soap/u/32.0
+	at org.fundacionjala.gradle.plugins.enforce.wsc.Connector.login(Connector.groovy:65)
+	at org.fundacionjala.gradle.plugins.enforce.wsc.Connector$login$0.call(Unknown Source)
+	at org.fundacionjala.gradle.plugins.enforce.wsc.ForceAPI.createConnector(ForceAPI.groovy:45)
+	at org.fundacionjala.gradle.plugins.enforce.wsc.ForceAPI.<init>(ForceAPI.groovy:37)
+	at org.fundacionjala.gradle.plugins.enforce.wsc.ForceAPI.<init>(ForceAPI.groovy:26)
+	at org.fundacionjala.gradle.plugins.enforce.wsc.soap.MetadataAPI.<init>(MetadataAPI.groovy:36)
+	at org.fundacionjala.gradle.plugins.enforce.wsc.ForceFactory.getForceAPI(ForceFactory.groovy:30)
+	at org.fundacionjala.gradle.plugins.enforce.wsc.ForceFactory$getForceAPI.call(Unknown Source)
+	at org.fundacionjala.gradle.plugins.enforce.metadata.RetrieveMetadata.executeRetrieve(RetrieveMetadata.groovy:64)
+	at org.fundacionjala.gradle.plugins.enforce.metadata.RetrieveMetadata$executeRetrieve.call(Unknown Source)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.salesforce.retrieve.Retrieval.executeRetrieve(Retrieval.groovy:72)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.salesforce.retrieve.Retrieval$executeRetrieve.callCurrent(Unknown Source)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.salesforce.retrieve.Retrieve.runRetrieve(Retrieve.groovy:134)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.salesforce.retrieve.Retrieve.retrieveWithoutPackageXml(Retrieve.groovy:111)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.salesforce.retrieve.Retrieve.runTask(Retrieve.groovy:48)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.salesforce.SalesforceTask.executeTask(SalesforceTask.groovy:262)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.ForceTask$_start_closure1.doCall(ForceTask.groovy:58)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.ForceTask$_start_closure1.doCall(ForceTask.groovy)
+	at org.fundacionjala.gradle.plugins.enforce.tasks.ForceTask.withExceptionHandling(ForceTask.groovy:107)
+	... 67 more
+Caused by: com.sforce.ws.ConnectionException: Failed to send request to https://login.salesforce.com/services/Soap/u/32.0
+	at com.sforce.ws.transport.SoapConnection.send(SoapConnection.java:121)
+	at com.sforce.soap.partner.PartnerConnection.login(PartnerConnection.java:1349)
+	at com.sforce.soap.partner.PartnerConnection$login.call(Unknown Source)
+	at org.fundacionjala.gradle.plugins.enforce.wsc.Connector.login(Connector.groovy:57)
+	... 85 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.sforce.ws.transport.JdkHttpTransport.connectRaw(JdkHttpTransport.java:136)
+	at com.sforce.ws.transport.JdkHttpTransport.connectLocal(JdkHttpTransport.java:100)
+	at com.sforce.ws.transport.JdkHttpTransport.connectLocal(JdkHttpTransport.java:95)
+	at com.sforce.ws.transport.JdkHttpTransport.connect(JdkHttpTransport.java:91)
+	at com.sforce.ws.transport.SoapConnection.send(SoapConnection.java:95)
+	... 88 more
+
+
+BUILD FAILED
+
+Total time: 11.787 secs
